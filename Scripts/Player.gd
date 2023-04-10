@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 300.0
+const SPEED = 400.0
 const JUMP_VELOCITY = -400.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -17,6 +17,9 @@ func _physics_process(delta):
 			velocity.x = -SPEED
 			$Sprite.flip_h = true
 			$Sprite.play("Run")
+		if Input.is_action_pressed("Left") and Input.is_action_pressed("Right"):
+			velocity.x = 0
+			$Sprite.play("Idle")
 		else:
 			velocity.x = lerp(velocity.x, 0.0, .5)
 		if Input.is_action_just_pressed("Up"):
@@ -37,5 +40,7 @@ func _physics_process(delta):
 		else:
 			velocity.x = lerp(velocity.x, 0.0, .4)
 		
+	if Input.is_action_pressed("Attack1"):
+		$Sprite.play("Attack")
 	
 	move_and_slide()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://y8svy0l244fm"]
+[gd_scene load_steps=55 format=3 uid="uid://y8svy0l244fm"]
 
 [ext_resource type="Texture2D" uid="uid://idpj3dkt84kb" path="res://Assets/Tilesets/Forest & Ice Tiles/Cobble.png" id="1_ujto7"]
 [ext_resource type="Texture2D" uid="uid://bjjtque87yf5n" path="res://Assets/Tilesets/Forest & Ice Tiles/climbvines_set.png" id="2_pxqve"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bsir3dj8q6bym" path="res://Assets/Characters/Colour2/NoOutline/120x80_PNGSheets/_JumpFallInbetween.png" id="6_fvj12"]
 [ext_resource type="Texture2D" uid="uid://cmntj6dn5tnot" path="res://Assets/Characters/Colour2/NoOutline/120x80_PNGSheets/_Run.png" id="8_iwmcn"]
 [ext_resource type="Texture2D" uid="uid://7iju5n6axqv1" path="res://Assets/Characters/Colour2/NoOutline/120x80_PNGSheets/_Dash.png" id="9_1vbri"]
+[ext_resource type="Texture2D" uid="uid://d16v3257nacg4" path="res://Assets/Characters/Colour2/NoOutline/120x80_PNGSheets/_WallSlide.png" id="11_egwdv"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_s3suo"]
 tile_data = PackedInt32Array(0, 131072, 0, 65536, 458752, 0, 131072, 458752, 3, 196608, 65536, 2, 65537, 65536, 0, 131073, 458752, 0, 196609, 458752, 3, 131074, 131072, 0, 196610, 458752, 2, 196611, 131072, 0)
@@ -486,6 +487,18 @@ region = Rect2(1000, 41, 31, 39)
 atlas = ExtResource("8_iwmcn")
 region = Rect2(1120, 41, 31, 39)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_rgk3x"]
+atlas = ExtResource("11_egwdv")
+region = Rect2(47, 43, 23, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ypax"]
+atlas = ExtResource("11_egwdv")
+region = Rect2(167, 43, 23, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e3loy"]
+atlas = ExtResource("11_egwdv")
+region = Rect2(287, 43, 23, 37)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_ev2l1"]
 animations = [{
 "frames": [{
@@ -526,7 +539,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_mo7a5")
 }],
-"loop": true,
+"loop": false,
 "name": &"Fall",
 "speed": 6.0
 }, {
@@ -561,7 +574,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_41euf")
 }],
-"loop": true,
+"loop": false,
 "name": &"Idle",
 "speed": 9.0
 }, {
@@ -575,7 +588,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ys618")
 }],
-"loop": true,
+"loop": false,
 "name": &"Jump",
 "speed": 6.0
 }, {
@@ -621,9 +634,23 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_d81vg")
 }],
-"loop": true,
+"loop": false,
 "name": &"Run",
 "speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rgk3x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ypax")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e3loy")
+}],
+"loop": true,
+"name": &"WallSlide",
+"speed": 5.0
 }]
 
 [node name="Root" type="Node2D"]
@@ -649,5 +676,5 @@ shape = SubResource("CapsuleShape2D_3h06y")
 [node name="Sprite" type="AnimatedSprite2D" parent="Character/Body"]
 scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_ev2l1")
-animation = &"Idle"
+animation = &"WallSlide"
 autoplay = "Idle"

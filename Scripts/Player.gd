@@ -26,6 +26,9 @@ func _physics_process(delta):
 			velocity.y += JUMP_VELOCITY
 			$Sprite.play("Jump")
 	if not is_on_floor():
+#		TODO Player slows if is attacking on a wall
+		if is_on_wall() and Input.is_action_pressed("Attack1"):
+			velocity.y = 10
 		velocity.y += delta * gravity
 		if -20<=velocity.y and velocity.y<=0:
 			$Sprite.play("Jump_peak")

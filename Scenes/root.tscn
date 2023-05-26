@@ -1,7 +1,8 @@
-[gd_scene load_steps=55 format=3 uid="uid://y8svy0l244fm"]
+[gd_scene load_steps=56 format=3 uid="uid://y8svy0l244fm"]
 
-[ext_resource type="Texture2D" uid="uid://idpj3dkt84kb" path="res://Assets/Tilesets/Forest & Ice Tiles/Cobble.png" id="1_ujto7"]
-[ext_resource type="Texture2D" uid="uid://bjjtque87yf5n" path="res://Assets/Tilesets/Forest & Ice Tiles/climbvines_set.png" id="2_pxqve"]
+[ext_resource type="Script" path="res://Scenes/root.gd" id="1_kj6p8"]
+[ext_resource type="Texture2D" uid="uid://idpj3dkt84kb" path="res://Assets/Tilesets/Forest _ Ice Tiles/Cobble.png" id="1_ujto7"]
+[ext_resource type="Texture2D" uid="uid://bjjtque87yf5n" path="res://Assets/Tilesets/Forest _ Ice Tiles/climbvines_set.png" id="2_pxqve"]
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="3_nfxam"]
 [ext_resource type="Texture2D" uid="uid://dd7dreilr7hn8" path="res://Assets/Characters/Colour2/NoOutline/120x80_PNGSheets/_AttackNoMovement.png" id="4_20cqu"]
 [ext_resource type="Texture2D" uid="uid://lnt2e3i64vrq" path="res://Assets/Characters/Colour2/NoOutline/120x80_PNGSheets/_Fall.png" id="4_47e6v"]
@@ -654,6 +655,7 @@ animations = [{
 }]
 
 [node name="Root" type="Node2D"]
+script = ExtResource("1_kj6p8")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(-14, 3)

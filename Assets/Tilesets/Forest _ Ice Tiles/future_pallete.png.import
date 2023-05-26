@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhk6ulw8ujv6v"
-path="res://.godot/imported/jungle_background.png-3964435ef20053605e78d55c6986165a.ctex"
+uid="uid://diiquqaiv4g02"
+path="res://.godot/imported/future_pallete.png-019be93cc99b7e78c750886709a8abd1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tilesets/Forest & Ice Tiles/jungle_background.png"
-dest_files=["res://.godot/imported/jungle_background.png-3964435ef20053605e78d55c6986165a.ctex"]
+source_file="res://Assets/Tilesets/Forest _ Ice Tiles/future_pallete.png"
+dest_files=["res://.godot/imported/future_pallete.png-019be93cc99b7e78c750886709a8abd1.ctex"]
 
 [params]
 

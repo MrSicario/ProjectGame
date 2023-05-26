@@ -9,6 +9,7 @@ const TOP_ANI = ["Attack", "WallSlide"]
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var clinging = false
 var spear_cd = true
+var balance_time = 0.25
 
 func get_Fall_Speed(delta, clinging):
 	if clinging and is_on_wall_only():
@@ -91,5 +92,11 @@ func _physics_process(delta):
 		if is_on_wall_only():
 			clinging = true
 		poleJump()
+	if Input.is_action_just_pressed("Attack2"):
+		if !is_on_floor():
+			gravity = 0
+			await get_tree().create_timer(balance_time).timeout
+			gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+			
 	play_Animation()
 	move_and_slide()

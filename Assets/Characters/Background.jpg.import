@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjjtque87yf5n"
-path="res://.godot/imported/climbvines_set.png-a7a5c3367e1ca0b0ad6eb8a9f6f046cb.ctex"
+uid="uid://cypijfrekqpt8"
+path="res://.godot/imported/Background.jpg-210942670e3d8505d4e2f7bed3eb219d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tilesets/Forest & Ice Tiles/climbvines_set.png"
-dest_files=["res://.godot/imported/climbvines_set.png-a7a5c3367e1ca0b0ad6eb8a9f6f046cb.ctex"]
+source_file="res://Assets/Characters/Background.jpg"
+dest_files=["res://.godot/imported/Background.jpg-210942670e3d8505d4e2f7bed3eb219d.ctex"]
 
 [params]
 

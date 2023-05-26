@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://idpj3dkt84kb"
-path="res://.godot/imported/Cobble.png-1f207009e5230663b1d73c03a3a4b632.ctex"
+uid="uid://dhk6ulw8ujv6v"
+path="res://.godot/imported/jungle_background.png-a6dfd248de74e91332e20d7107541948.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tilesets/Forest & Ice Tiles/Cobble.png"
-dest_files=["res://.godot/imported/Cobble.png-1f207009e5230663b1d73c03a3a4b632.ctex"]
+source_file="res://Assets/Tilesets/Forest _ Ice Tiles/jungle_background.png"
+dest_files=["res://.godot/imported/jungle_background.png-a6dfd248de74e91332e20d7107541948.ctex"]
 
 [params]
 

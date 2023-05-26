@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b0s6ijx0pajsh"
-path="res://.godot/imported/Ice_background.png-6daf1425b6a9e9a743d53fc3046820bf.ctex"
+path="res://.godot/imported/Ice_background.png-0a3247ea493fe528fcf7cf6a7f6fc699.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tilesets/Forest & Ice Tiles/Ice_background.png"
-dest_files=["res://.godot/imported/Ice_background.png-6daf1425b6a9e9a743d53fc3046820bf.ctex"]
+source_file="res://Assets/Tilesets/Forest _ Ice Tiles/Ice_background.png"
+dest_files=["res://.godot/imported/Ice_background.png-0a3247ea493fe528fcf7cf6a7f6fc699.ctex"]
 
 [params]
 

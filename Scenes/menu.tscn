@@ -1,0 +1,75 @@
+[gd_scene load_steps=4 format=3 uid="uid://olqgo2orcc2v"]
+
+[ext_resource type="Script" path="res://Scenes/vboxbotones.gd" id="1_0843w"]
+[ext_resource type="FontFile" uid="uid://bs1ep8jc5fish" path="res://Assets/Characters/Poco.ttf" id="2_egpi4"]
+[ext_resource type="PackedScene" uid="uid://7xqrbe2e765e" path="res://parallax_background.tscn" id="3_ahlwx"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 3.0
+offset_right = 1.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="vboxbotones" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.781
+anchor_right = 0.5
+anchor_bottom = 0.781
+offset_left = -259.0
+offset_top = -237.863
+offset_right = 259.0
+offset_bottom = 0.136993
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0843w")
+
+[node name="Jugar" type="Button" parent="vboxbotones"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.921569, 0.0117647, 0, 1)
+theme_override_fonts/font = ExtResource("2_egpi4")
+theme_override_font_sizes/font_size = 70
+action_mode = 0
+text = "Jugar"
+flat = true
+expand_icon = true
+
+[node name="Salir" type="Button" parent="vboxbotones"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.921569, 0.0117647, 0, 1)
+theme_override_fonts/font = ExtResource("2_egpi4")
+theme_override_font_sizes/font_size = 70
+action_mode = 0
+text = "Salir
+"
+flat = true
+expand_icon = true
+
+[node name="TextEdit" type="TextEdit" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.245
+anchor_right = 0.5
+anchor_bottom = 0.245
+offset_left = -236.0
+offset_top = -106.76
+offset_right = 236.0
+offset_bottom = 81.24
+theme_override_fonts/font = ExtResource("2_egpi4")
+theme_override_font_sizes/font_size = 100
+text = "Rat Spear"
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("3_ahlwx")]
+
+[connection signal="pressed" from="vboxbotones/Jugar" to="vboxbotones" method="_on_jugar_pressed"]
+[connection signal="pressed" from="vboxbotones/Salir" to="vboxbotones" method="_on_salir_pressed"]
